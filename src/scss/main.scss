@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+// Color Declarations
+$header: #27b0eb;
+$white: #fff;
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+// header
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $header;
+  padding: 2rem 9%;
+
+  .logo {
+    color: $white;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+  }
+  .navbar {
+    a {
+      margin: 0 1rem;
+      font-size: 1.7rem;
+      color: $white;
+    }
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    color: $white;
+    background: none;
+    border: 1px solid $white;
+    cursor: pointer;
+    // margin-top: 1rem;
+    font-size: 1.7rem;
+
+    i {
+      margin-left: 0.3rem;
+    }
+    &:hover {
+      -webkit-border-radius: 5px;
+      -webkit-border-top-left-radius: 18px;
+      -webkit-border-bottom-right-radius: 18px;
+      -moz-border-radius: 5px;
+      -moz-border-radius-topleft: 18px;
+      -moz-border-radius-bottomright: 18px;
+      border-radius: 5px;
+      border-top-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+  }
+}
