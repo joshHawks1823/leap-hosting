@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 // Color Declarations
-$header: #27b0eb;
+$header: #f9fafa;
 $white: #fff;
+$text-color: #28b1ec;
+$text: #38464d;
+$text2: #ff951f;
+$text3: #0f52ba;
+$text4: #dd4b39;
 
 * {
   font-family: 'Open Sans', sans-serif;
@@ -22,6 +27,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  padding: 2rem 9%;
+}
+
 // header
 
 .header {
@@ -33,25 +42,24 @@ html {
   padding: 2rem 9%;
 
   .logo {
-    color: $white;
+    color: $text4;
     font-size: 2.3rem;
     text-transform: uppercase;
   }
   .navbar {
     a {
       margin: 0 1rem;
-      font-size: 1.7rem;
-      color: $white;
+      font-size: 1.9rem;
+      color: $text4;
     }
   }
   .btn {
     display: inline-block;
     padding: 0.9rem 1.5rem;
-    color: $white;
+    color: $text4;
     background: none;
-    border: 1px solid $white;
+    border: 1px solid $text4;
     cursor: pointer;
-    // margin-top: 1rem;
     font-size: 1.7rem;
 
     i {
@@ -59,21 +67,84 @@ html {
     }
     &:hover {
       -webkit-border-radius: 5px;
-      -webkit-border-top-left-radius: 18px;
-      -webkit-border-bottom-right-radius: 18px;
       -moz-border-radius: 5px;
-      -moz-border-radius-topleft: 18px;
-      -moz-border-radius-bottomright: 18px;
       border-radius: 5px;
-      border-top-left-radius: 18px;
-      border-bottom-right-radius: 18px;
     }
   }
   #menu-btn {
     font-size: 3rem;
-    color: $white;
+    color: $text4;
     cursor: pointer;
     display: none;
+  }
+}
+
+// Home
+
+.home {
+  background: $header;
+  // min-height: 100vh;
+  padding-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+
+  .content {
+    flex: 1 1 40rem;
+
+    h3 {
+      font-size: 3.8rem;
+      color: $text;
+      font-weight: 700;
+    }
+    h4 {
+      font-size: 2.8rem;
+      color: $text;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.7rem;
+      color: $text;
+      padding: 1rem 0;
+      max-width: 85%;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.5rem;
+      color: $text2;
+      background: none;
+      border: 1px solid $text2;
+      cursor: pointer;
+      font-size: 1.7rem;
+
+      &:hover {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    }
+    .button {
+      display: flex;
+      gap: 1.7rem;
+      align-items: center;
+      margin: 2rem 0;
+
+      h6 {
+        font-size: 2.1rem;
+        color: $text3;
+      }
+    }
+  }
+
+  .image {
+    flex: 1 1 40rem;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -83,6 +154,9 @@ html {
     font-size: 55%;
   }
   .header {
+    padding: 2rem;
+  }
+  section {
     padding: 2rem;
   }
 }
@@ -117,5 +191,14 @@ html {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .home {
+    .content {
+      p {
+        max-width: 100%;
+      }
+    }
   }
 }
