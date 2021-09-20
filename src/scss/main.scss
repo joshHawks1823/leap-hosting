@@ -8,6 +8,7 @@ $text: #38464d;
 $text2: #ff951f;
 $text3: #0f52ba;
 $text4: #dd4b39;
+$background-color: #404f58;
 
 * {
   font-family: 'Open Sans', sans-serif;
@@ -27,8 +28,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 3.5rem 0 1rem 0;
+  margin-bottom: 2rem;
+  color: $text;
+}
+
 section {
-  padding: 2rem 9%;
+  padding: 3rem 9%;
 }
 
 // header
@@ -83,7 +92,6 @@ section {
 
 .home {
   background: $header;
-  // min-height: 100vh;
   padding-top: 6rem;
   display: flex;
   flex-wrap: wrap;
@@ -148,7 +156,123 @@ section {
   }
 }
 
+// Features
+
+.features {
+  padding-bottom: 7.5rem;
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+  }
+  .box {
+    padding: 3rem 2rem;
+
+    i {
+      font-size: 5rem;
+      color: $text-color;
+      margin-bottom: 2.5rem;
+    }
+    h4 {
+      font-size: 2.1rem;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      color: $text;
+    }
+    p {
+      color: $text;
+      font-size: 1.7rem;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+  }
+}
+
+// Pricing
+
+.pricing {
+  background: $background-color;
+  .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .box {
+      flex: 0.2 0.2 27rem;
+      margin: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border: 0.1rem solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      text-align: center;
+      padding-bottom: 3rem;
+
+      .btn {
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 1rem;
+        padding: 0.8rem 3rem;
+        border-radius: 5rem;
+        background: conic-gradient(
+          from 90deg at bottom right,
+          cyan,
+          rebeccapurple
+        );
+        font-size: 1.7rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        transition: all 0.3s linear;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+
+      .title {
+        color: $text;
+        font-size: 2.5rem;
+        padding-top: 1rem;
+        text-transform: capitalize;
+      }
+      .price {
+        font-size: 2.6rem;
+        color: $text-color;
+        padding: 1rem 0;
+        span {
+          font-size: 2rem;
+        }
+      }
+      ul {
+        padding: 1rem 0;
+        list-style: none;
+
+        li {
+          font-size: 1.7rem;
+          color: $text;
+          padding: 0.5rem 0;
+
+          .fa-check {
+            color: lightgreen;
+          }
+          .fa-times {
+            color: tomato;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pricing .box-container .box:nth-child(2),
+.pricing .box-container .box:hover {
+  border: 0.4rem solid $text3;
+}
+
 // Media Queries
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -191,6 +315,28 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .heading {
+    margin-bottom: 3.2rem;
+  }
+  .features {
+    .box-container {
+      .box {
+        padding-top: 0.5rem;
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .pricing {
+    .box-container {
+      .box {
+        min-width: 90%;
+      }
+    }
   }
 }
 @media (max-width: 400px) {
