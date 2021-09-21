@@ -9,6 +9,7 @@ $text2: #ff951f;
 $text3: #0f52ba;
 $text4: #dd4b39;
 $background-color: #404f58;
+$orange: #f79f1f;
 
 * {
   font-family: 'Open Sans', sans-serif;
@@ -31,13 +32,13 @@ html {
 .heading {
   text-align: center;
   font-size: 3.5rem;
-  padding: 3.5rem 0 1rem 0;
+  padding-bottom: 1rem;
   margin-bottom: 2rem;
   color: $text;
 }
 
 section {
-  padding: 3rem 9%;
+  padding: 5.8% 9%;
 }
 
 // header
@@ -159,7 +160,6 @@ section {
 // Features
 
 .features {
-  padding-bottom: 7.5rem;
   .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
@@ -271,6 +271,72 @@ section {
   border: 0.4rem solid $text3;
 }
 
+// Reviews
+
+.review {
+  .review-slider {
+    background: $white;
+    padding: 1.5rem;
+    cursor: pointer;
+    color: $white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+    .slide {
+      background: $white;
+      text-align: center;
+      padding: 3rem;
+
+      img {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+      }
+      h3 {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        color: $text;
+      }
+      p {
+        font-size: 1.6rem;
+        max-width: 80%;
+        margin: auto;
+        color: $text;
+        line-height: 1.7;
+        padding: 1rem 0;
+
+        span {
+          font-size: 3.5rem;
+          color: $text-color;
+        }
+      }
+      .stars {
+        padding: 1rem 0;
+        padding-bottom: 1rem;
+
+        i {
+          font-size: 2rem;
+          color: $orange;
+        }
+      }
+    }
+  }
+  .swiper-pagination {
+    position: static;
+    text-align: center;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $text-color;
+}
+
 // Media Queries
 
 @media (max-width: 991px) {
@@ -286,6 +352,9 @@ section {
 }
 
 @media (max-width: 768px) {
+  section {
+    padding: 7% 9%;
+  }
   .header {
     #menu-btn {
       display: initial;
@@ -315,6 +384,10 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  section {
+    padding: 8% 9%;
   }
 
   .heading {

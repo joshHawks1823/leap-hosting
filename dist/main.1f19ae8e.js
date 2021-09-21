@@ -125,6 +125,19 @@ menu.onclick = function () {
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
 };
+
+var swiper = new Swiper('.review-slider', {
+  loop: true,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5500,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination'
+  }
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -153,7 +166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64278" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53670" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

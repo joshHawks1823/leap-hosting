@@ -20,13 +20,13 @@ html {
 .heading {
   text-align: center;
   font-size: 3.5rem;
-  padding: 3.5rem 0 1rem 0;
+  padding-bottom: 1rem;
   margin-bottom: 2rem;
   color: #38464d;
 }
 
 section {
-  padding: 3rem 9%;
+  padding: 5.8% 9%;
 }
 
 .header {
@@ -131,9 +131,6 @@ section {
   width: 100%;
 }
 
-.features {
-  padding-bottom: 7.5rem;
-}
 .features .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
@@ -231,6 +228,64 @@ section {
   border: 0.4rem solid #0f52ba;
 }
 
+.review .review-slider {
+  background: #fff;
+  padding: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+.review .review-slider .slide {
+  background: #fff;
+  text-align: center;
+  padding: 3rem;
+}
+.review .review-slider .slide img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+.review .review-slider .slide h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #38464d;
+}
+.review .review-slider .slide p {
+  font-size: 1.6rem;
+  max-width: 80%;
+  margin: auto;
+  color: #38464d;
+  line-height: 1.7;
+  padding: 1rem 0;
+}
+.review .review-slider .slide p span {
+  font-size: 3.5rem;
+  color: #28b1ec;
+}
+.review .review-slider .slide .stars {
+  padding: 1rem 0;
+  padding-bottom: 1rem;
+}
+.review .review-slider .slide .stars i {
+  font-size: 2rem;
+  color: #f79f1f;
+}
+.review .swiper-pagination {
+  position: static;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet-active {
+  background: #28b1ec;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -245,6 +300,10 @@ section {
   }
 }
 @media (max-width: 768px) {
+  section {
+    padding: 7% 9%;
+  }
+
   .header #menu-btn {
     display: initial;
   }
@@ -269,6 +328,10 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  section {
+    padding: 8% 9%;
   }
 
   .heading {
