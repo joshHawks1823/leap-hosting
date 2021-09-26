@@ -20,9 +20,9 @@ html {
 .heading {
   text-align: center;
   font-size: 3.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   margin-bottom: 2rem;
-  color: #38464d;
+  color: #444;
 }
 
 section {
@@ -38,21 +38,21 @@ section {
   padding: 2rem 9%;
 }
 .header .logo {
-  color: #dd4b39;
+  color: #0f52ba;
   font-size: 2.3rem;
   text-transform: uppercase;
 }
 .header .navbar a {
   margin: 0 1rem;
   font-size: 1.9rem;
-  color: #dd4b39;
+  color: #0f52ba;
 }
 .header .btn {
   display: inline-block;
   padding: 0.9rem 1.5rem;
-  color: #dd4b39;
+  color: #0f52ba;
   background: none;
-  border: 1px solid #dd4b39;
+  border: 1px solid #0f52ba;
   cursor: pointer;
   font-size: 1.7rem;
 }
@@ -66,7 +66,7 @@ section {
 }
 .header #menu-btn {
   font-size: 3rem;
-  color: #dd4b39;
+  color: #0f52ba;
   cursor: pointer;
   display: none;
 }
@@ -84,18 +84,18 @@ section {
 }
 .home .content h3 {
   font-size: 3.8rem;
-  color: #38464d;
+  color: #444;
   font-weight: 700;
 }
 .home .content h4 {
   font-size: 2.8rem;
-  color: #38464d;
+  color: #444;
   font-weight: 300;
   margin-bottom: 0.5rem;
 }
 .home .content p {
   font-size: 1.7rem;
-  color: #38464d;
+  color: #444;
   padding: 1rem 0;
   max-width: 85%;
   line-height: 1.6;
@@ -148,10 +148,10 @@ section {
   font-size: 2.1rem;
   margin-bottom: 1.5rem;
   font-weight: 400;
-  color: #38464d;
+  color: #444;
 }
 .features .box p {
-  color: #38464d;
+  color: #444;
   font-size: 1.7rem;
   font-weight: 300;
   line-height: 1.7;
@@ -194,7 +194,7 @@ section {
   opacity: 0.9;
 }
 .pricing .box-container .box .title {
-  color: #38464d;
+  color: #444;
   font-size: 2.5rem;
   padding-top: 1rem;
   text-transform: capitalize;
@@ -213,7 +213,7 @@ section {
 }
 .pricing .box-container .box ul li {
   font-size: 1.7rem;
-  color: #38464d;
+  color: #444;
   padding: 0.5rem 0;
 }
 .pricing .box-container .box ul li .fa-check {
@@ -252,13 +252,13 @@ section {
 .review .review-slider .slide h3 {
   font-size: 2.5rem;
   text-transform: capitalize;
-  color: #38464d;
+  color: #444;
 }
 .review .review-slider .slide p {
   font-size: 1.6rem;
   max-width: 80%;
   margin: auto;
-  color: #38464d;
+  color: #444;
   line-height: 1.7;
   padding: 1rem 0;
 }
@@ -286,6 +286,49 @@ section {
   background: #28b1ec;
 }
 
+.support {
+  background: #f9fafa;
+}
+.support .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 1rem;
+}
+.support .box-container ul {
+  padding: 0 3rem 2rem;
+}
+.support .box-container ul li {
+  list-style: none;
+}
+.support .box-container ul li .question {
+  font-size: 2.2rem;
+  margin: 1.5rem 0;
+  color: #0f52ba;
+  font-weight: 600;
+}
+.support .box-container ul li .answer {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #444;
+}
+.support .support-forum {
+  text-align: center;
+  margin-top: 2.3rem;
+}
+.support .support-forum h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.3rem;
+  color: #0f52ba;
+}
+.support .support-forum a {
+  font-size: 2.7rem;
+  color: #28b1ec;
+}
+.support .support-forum a:hover {
+  border-bottom: 2px solid #28b1ec;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -297,6 +340,14 @@ section {
 
   section {
     padding: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  .support .box-container {
+    display: block;
+  }
+  .support .box-container ul {
+    padding: 0.8rem 2rem;
   }
 }
 @media (max-width: 768px) {
