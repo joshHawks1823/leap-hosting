@@ -12,9 +12,9 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
   scroll-padding-top: 7rem;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .heading {
@@ -235,6 +235,8 @@ section {
   color: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .review .review-slider .slide {
   background: #fff;
@@ -374,6 +376,7 @@ section {
 }
 .newsletter form input[type=submit] {
   background: #fff;
+  color: #444;
   width: 20rem;
   font-size: 1.7rem;
   border-radius: 5rem;
